@@ -93,7 +93,7 @@ body{
     left:1%;
     top:5%;
     overflow-y: auto;
-    
+    scrollbar-width: thin;
 }
 li{
     list-style: none;
