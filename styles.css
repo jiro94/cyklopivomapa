@@ -126,7 +126,7 @@ button:active{
 /*telefony*/
 @media screen and (max-width: 600px) {
     .top{
-        height: 70px;
+        height: 50px;
     }
 
     .nadpis{
@@ -138,14 +138,14 @@ button:active{
         letter-spacing: 15px;
         color: rgb(0, 0, 0);
         position: relative;
-        top: 25px;
-        left:50%;
+        top: 5px;
+        left:51%;
         transform: translateX(-50%);
     }
     
     .main{
-        top: 120px;
-        height: 80%;
+        top: 90px;
+        height: 85%;
 
     }
     #map{
@@ -153,7 +153,7 @@ button:active{
         border-radius: 20px;
         position: absolute;
         width: 94%;
-        height: 62%;
+        height: 58%;
         left:0%;
         top:1%;
         padding:0px;
@@ -168,9 +168,9 @@ button:active{
         border-top-style: dashed;
         position: absolute;
         width: 90%;
-        height: 30%;
+        height: 32%;
         left:0%;
-        top:66%;
+        top:62%;
         overflow-y: auto;
         left:50%;
         transform: translateX(-50%);
