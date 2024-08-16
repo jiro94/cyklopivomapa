@@ -1,0 +1,76 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Cyklopivo mapa</title>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 class="nadpis">CykloPivoMapa</h1>
+            <img src="logo.png" id="logo">
+        </div>
+        <div class="main">
+            <div id="textbox">
+                <ul id="seznam">
+                    <li><button onclick="map.setView([49.84995, 18.27988],18)">Kurnik šopa - Centrum</button></li>
+                    <li><button onclick="map.setView([49.83898, 18.16330],18)">Kurnik šopa - Poruba</button></li>
+                    <li><button onclick="map.setView([49.84701, 18.28612],18)">Restaurace Palouk</button></li>
+                    <li><button onclick="map.setView([49.82699, 18.17788],18)">Sbeerka</button></li>
+                    <li><button onclick="map.setView([49.78085, 18.23240],18)">Starobělská Koliba</button></li>
+                    <li><button onclick="map.setView([49.77995, 18.25701],18)">Žíznivý dromedár</button></li>
+                    <li><button onclick="map.setView([49.82584, 18.16196],18)">Barunka Speciál Bar</button></li>
+                    <li><button onclick="map.setView([49.83596, 18.25950],18)">U Segala</button></li>
+                </ul>
+            </div>
+            <div id="map"></div>
+             <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        
+   
+        // Initialize the map and set its view to a specific location and zoom level
+        var map = L.map('map').setView([49.82, 18.24], 12); // Coordinates Ostrava
+
+        // Add a tile layer to the map from OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Optional: Add a marker to the map at the initial location
+            L.marker([49.84995, 18.27988]).addTo(map)
+            .bindPopup('Kurnik šopa - Centrum <a href="https://www.kurniksopahospoda.cz/" target="_blank">https://www.kurniksopahospoda.cz/</a>');
+            //.openPopup();
+            L.marker([49.83898, 18.16330]).addTo(map)
+            .bindPopup('Kurnik šopa - Poruba <a href="https://www.kurniksopahospoda.cz/" target="_blank">https://www.kurniksopahospoda.cz/</a>');
+            //.openPopup();
+            L.marker([49.84701, 18.28612]).addTo(map)
+            .bindPopup('Restaurace Palouk <br> <a href="https://palouk.cz/co-je-na-cepu" target="_blank">Co je na čepu</a>');
+           // .openPopup();
+            L.marker([49.82699, 18.17788]).addTo(map)
+            .bindPopup('Sbeerka <br> <a href="https://sbeerka.cz/aktualne-na-cepu" target="_blank">Co je na čepu</a>');
+           // .openPopup();
+            L.marker([49.78085, 18.23240]).addTo(map)
+            .bindPopup('Starobělská Koliba <br> <a href="https://sbkoliba.cz/sbkoliba-napojovy-listek/" target="_blank">Nápojový lístek</a>');
+           // .openPopup();
+            L.marker([49.77995, 18.25701]).addTo(map)
+            .bindPopup('Žíznivý dromedár <br> <a href="https://www.ziznivydromedar.cz/piva" target="_blank">Nabídka</a>');
+            //.openPopup();
+            L.marker([49.82584, 18.16196]).addTo(map)
+            .bindPopup('Barunka Speciál Bar <br> <a href="https://restaurace-barunka.cz/?" target="_blank">Barunka web</a>');
+            //.openPopup();
+            L.marker([49.83596, 18.25950]).addTo(map)
+            .bindPopup('U Segala <br> <a href="https://www.facebook.com/p/U-Segala-100063493930796/?locale=cs_CZ" target="_blank">U Segala fb info</a>');
+            //.openPopup();
+           /* L.marker([49.83, 18.28]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();*/
+
+    </script>
+        </div>        
+    </div>
+</body>
+
+</html>
