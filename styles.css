@@ -106,7 +106,7 @@ button{
     font-weight: 100;
     font-size: 14px;
     border-color: white;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     /*font-style: oblique;*/
     background-color: rgba(99, 99, 99, 0.178);
     color: rgb(255, 255, 255);
@@ -116,7 +116,7 @@ button{
 button:hover{
     background-color: rgb(99, 99, 99, 0.278);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
 }
 button:active{
     background-color: rgba(56, 56, 56, 0.4);
@@ -124,7 +124,7 @@ button:active{
 }
 button:focus{
     background-color: rgba(56, 56, 56, 0.4);
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /******************************telefony*******************************/
@@ -202,14 +202,18 @@ button:focus{
         
     }
     button:hover{
-        background-color: rgb(63,63,63,0.8);
+        background-color: rgb(63,63,63,0.4);
         cursor: pointer;
         font-size: 14px;
     }
-   /*button:focus{
+    button:active{
+        background-color: rgba(63,63,63,0.8);
+        cursor: grabbing;
+    }
+    button:focus{
         background-color: rgba(63, 63, 63, 0.8);
         font-size: 14px;
-    }*/
+    }
 
     #logo {
       display: none;
