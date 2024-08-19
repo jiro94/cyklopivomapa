@@ -201,15 +201,15 @@ button:focus{
         transform: translateX(-4px);
         
     }
-    /*button:hover{
-        background-color: rgb(99, 99, 99, 0.278);
+    button:hover{
+        background-color: rgb(63,63,63,0.8);
         cursor: pointer;
-        font-size: 16px;
-    }*/
-    button:focus{
-        background-color: rgba(63, 63, 63, 0.8);
-        font-size: 16px;
+        font-size: 14px;
     }
+   /*button:focus{
+        background-color: rgba(63, 63, 63, 0.8);
+        font-size: 14px;
+    }*/
 
     #logo {
       display: none;
