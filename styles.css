@@ -122,9 +122,14 @@ button:active{
     background-color: rgba(56, 56, 56, 0.4);
     cursor: grabbing;
 }
+button:focus{
+    background-color: rgba(56, 56, 56, 0.4);
+    font-size: 20px;
+}
 
 /******************************telefony*******************************/
 @media screen and (max-width: 600px) {
+  
     .top{
         height: 50px;
         width: 100%;
@@ -199,6 +204,10 @@ button:active{
     button:hover{
         background-color: rgb(99, 99, 99, 0.278);
         cursor: pointer;
+        font-size: 16px;
+    }
+    button:focus{
+        background-color: rgba(56, 56, 56, 0.4);
         font-size: 16px;
     }
 
