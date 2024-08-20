@@ -1,0 +1,75 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Cyklopivo mapa</title>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 class="nadpis">CykloPivoMapa</h1>
+            <img src="logo.png" id="logo">
+            <div class="dropdown">
+                <button class="dropbutt">Menu</button>
+                <div class="dropdown-content">
+                  <a class="drop"  href="index.html">Výčepny</a>
+                  <a class="drop"  href="pivoteky.html">Pivotéky</a>
+                  <a class="drop"  href="jidlo.html">Jídlo</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="textbox">
+                <ul id="seznam">
+                    <li><button onmouseover="map.setView(coords[0],17)" onclick="map.setView(coords[0],17)">Bistro Morris</button></li>
+                    <li><button onmouseover="map.setView(coords[1],17)" onclick="map.setView(coords[1],17)">Zendino</button></li>
+                    <li><button onmouseover="map.setView(coords[2],17)" onclick="map.setView(coords[2],17)">Hood Bistro</button></li>
+                    <li><button onmouseover="map.setView(coords[3],17)" onclick="map.setView(coords[3],17)">Restaurace Osaka</button></li>
+                </ul>
+            </div>
+            <div id="map"></div>
+             <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        
+   
+        // defaultní pohled dle souřadnic a zoom
+        var map = L.map('map').setView([49.78, 18.26], 11); // Coordinates Ostrava
+
+        // přidání mapového podkladu do divu z openstreetmap + max zoom + copyright
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        //souřadnice
+        let coords = [
+            [49.83606, 18.28770],   //morris
+            [49.83494, 18.28730],   //zendino
+            [49.78570, 18.26619],   //hood
+            [49.81065, 18.25623],   //osaka
+          
+        ]
+        //markery
+            L.marker(coords[0]).addTo(map)
+            .bindPopup('Bistro Morris <br><a href="https://bistromorris.cz/" target="_blank">Morris web</a>');
+            L.marker(coords[1]).addTo(map)
+            .bindPopup('Zendino <br><a href="https://zendino.cz/" target="_blank">Zendino web</a>');
+            L.marker(coords[2]).addTo(map)
+            .bindPopup('Hood Bistro <br> <a href="https://www.facebook.com/people/Hood-Bistro/100087656991229/" target="_blank">Hood fb</a>');
+            L.marker(coords[3]).addTo(map)
+            .bindPopup('Restaurace Osaka <br> <a href="https://www.osakarestaurace.cz/" target="_blank">Osaka web</a>');
+           /* L.marker([49.83, 18.28]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();*/
+            
+
+    </script>
+  
+  
+        </div>        
+    </div>
+</body>
+
+</html>

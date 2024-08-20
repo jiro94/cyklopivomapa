@@ -1,0 +1,64 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Cyklopivo mapa</title>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 class="nadpis">CykloPivoMapa</h1>
+            <img src="logo.png" id="logo">
+            <div class="dropdown">
+                <button class="dropbutt">Menu</button>
+                <div class="dropdown-content">
+                  <a class="drop"  href="index.html">Výčepny</a>
+                  <a class="drop"  href="pivoteky.html">Pivotéky</a>
+                  <a class="drop"  href="jidlo.html">Jídlo</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="textbox">
+                <ul id="seznam">
+                    <li><button onmouseover="map.setView(coords[0],17)" onclick="map.setView(coords[0],17)">Alkotéka Ostrava</button></li>
+                    <li><button onmouseover="map.setView(coords[1],17)" onclick="map.setView(coords[1],17)">Starobělský pivovar</button></li>
+                </ul>
+            </div>
+            <div id="map"></div>
+             <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        
+        // defaultní pohled dle souřadnic a zoom
+        var map = L.map('map').setView([49.78, 18.26], 11); // Coordinates Ostrava
+
+        // přidání mapového podkladu do divu z openstreetmap + max zoom + copyright
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        //souřadnice
+        let coords = [
+            [49.82920, 18.17347],   //Alkotéka Ostrava
+            [49.76216, 18.20508]    //Starobelak
+        ]
+        //markery
+            L.marker(coords[0]).addTo(map)
+            .bindPopup('Alkotéka Ostrava <br><a href="https://alkoteka-ostrava.cz/" target="_blank">Alkotéka web</a>');
+            L.marker(coords[1]).addTo(map)
+            .bindPopup('Starobělský pivovar - prodejna <br><a href="https://eshop.starobelskypivovar.cz/" target="_blank">Web</a>');
+
+           /* L.marker([49.83, 18.28]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();*/
+            
+
+    </script>
+        </div>        
+    </div>
+</body>
+
+</html>
