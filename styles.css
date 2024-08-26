@@ -291,11 +291,12 @@ button:focus{
         /*font-style: oblique;*/
         border-radius: 5px;
         transform: translateX(-4px);
+        color: transparent;
         
     }
     button:hover{
         cursor: pointer;
-        font-size: 14px;
+        font-size: 14px;  
     }
    
     button:focus{
