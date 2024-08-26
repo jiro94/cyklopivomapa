@@ -232,6 +232,12 @@ button:focus{
         transform-style: preserve-3d;
         border-radius: 25px;
     }
+    .dropbutt:hover{
+        color: transparent;
+    }
+    .dropbutt:focus{
+        color: transparent;
+    }
     .dropdown-content a {
         width: 110px;
         height: 30px;
