@@ -33,6 +33,7 @@
                     <li><button onclick="map.setView(coords[7],17)">U Segala</button></li>
                     <li><button onclick="map.setView(coords[8],17)">Pivní Zkušebna</button></li>
                     <li><button onclick="map.setView(coords[10],17)">Hospůdka u Oráče</button></li>
+                    <li><button onclick="map.setView(coords[11],17)">DOCK Street Café</button></li>
                 </ul>
             </div>
             <div id="map"></div>
@@ -63,6 +64,7 @@
             [49.69064, 18.34139],   //zkušebna
             [49.83722, 18.28995],   //psí kusy
             [49.78229, 18.26955]    //oráč
+            [49.83648, 18.29610]    //dock
         ]
         //markery
             L.marker(coords[0]).addTo(map)
@@ -87,6 +89,8 @@
             .bindPopup('Psí Kusy <br> <a href="https://psikusyostrava.cz/?lang=cs" target="_blank">Psí Kusy web</a>');
             L.marker(coords[10]).addTo(map)
             .bindPopup('Hospůdka u Oráče <br> <a href="https://www.facebook.com/hospudkauorace/" target="_blank">Hospůdka u Oráče fb info</a>');
+            L.marker(coords[11]).addTo(map)
+            .bindPopup('DOCK street café <br> <a href="https://www.clubdock.cz/" target="_blank">DOCK web</a>');
            /* L.marker([49.83, 18.28]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();*/
