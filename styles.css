@@ -297,10 +297,12 @@ button:focus{
     button:hover{
         cursor: pointer;
         font-size: 14px;  
+        color: transparent;
     }
    
     button:focus{
         font-size: 14px;
+        color: transparent;
     }
 
     #logo {
