@@ -287,16 +287,16 @@ button:focus{
     }
   
     button{
-        height: 55px;
-        width: 90%;
+        height: 65px;
+        width: 100%;
         margin-bottom: 5px;
         font-family: Tahoma;
         font-weight: 100;
-        font-size: 12px;
-        letter-spacing: 3px;
+        font-size: 14px;
+        letter-spacing: 2px;
         /*font-style: oblique;*/
         border-radius: 5px;
-        transform: translateX(-4px);
+        transform: translateX(-6%);
         
         
     }
