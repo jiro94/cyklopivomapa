@@ -253,7 +253,7 @@ button:focus{
    
     .main{
         top: 70px;
-        height: 85%;
+        height: 90%;
     }
   
     #map{
@@ -275,8 +275,8 @@ button:focus{
         border-top: 3px solid rgb(255, 255, 255) ;
         border-top-style: dashed;
         position: absolute;
-        width: 90%;
-        height: 32%;
+        width: 96%;
+        height: 36%;
         left:0px;
         top:62%;
         overflow-y: auto;
