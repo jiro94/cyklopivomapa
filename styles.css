@@ -254,6 +254,7 @@ button:focus{
     .main{
         top: 70px;
         height: 87%;
+        width: 90%;
     }
   
     #map{
@@ -296,7 +297,7 @@ button:focus{
         letter-spacing: 2px;
         /*font-style: oblique;*/
         border-radius: 5px;
-        transform: translateX(-8%);
+        transform: translateX(-7%);
         
         
     }
