@@ -213,7 +213,7 @@ button:focus{
         letter-spacing: 5px;
         color: rgb(0, 0, 0);
         position: relative;
-        top: 5px;
+        top: 0px;
         left:50%;
         /*transform: translateX(-50%);*/
     }
