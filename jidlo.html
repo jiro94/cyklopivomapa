@@ -23,10 +23,12 @@
         <div class="main">
             <div id="textbox">
                 <ul id="seznam">
-                    <li><button onclick="map.setView(coords[0],17)">Bistro Morris</button></li>
-                    <li><button onclick="map.setView(coords[1],17)">Zendino</button></li>
+                    <li><button onclick="map.setView(coords[0],17)">Rafa pizza</button></li>
+                    <li><button onclick="map.setView(coords[4],17)">Skautská 11</button></li>
                     <li><button onclick="map.setView(coords[2],17)">Hood Bistro</button></li>
+
                     <li><button onclick="map.setView(coords[3],17)">Restaurace Osaka</button></li>
+                    <li><button onclick="map.setView(coords[1],17)">Zendino</button></li>
                 </ul>
             </div>
             <div id="map"></div>
@@ -46,21 +48,26 @@
 
         //souřadnice
         let coords = [
-            [49.83606, 18.28770],   //morris
+            [49.83654, 18.18228],   //rafa
             [49.83494, 18.28730],   //zendino
             [49.78570, 18.26619],   //hood
             [49.81065, 18.25623],   //osaka
-          
+            [49.82617, 18.17739],    //skautská 11
+            [49.78368, 18.24922]    //dobroty u dakoty
         ]
         //markery
             L.marker(coords[0]).addTo(map)
-            .bindPopup('Bistro Morris <br><a href="https://bistromorris.cz/" target="_blank">Morris web</a>');
+            .bindPopup('Rafa pizza <br><a href="https://rafabistro.cz/?lang=cs" target="_blank">Rafa pizza web</a>');
             L.marker(coords[1]).addTo(map)
             .bindPopup('Zendino <br><a href="https://zendino.cz/" target="_blank">Zendino web</a>');
             L.marker(coords[2]).addTo(map)
             .bindPopup('Hood Bistro <br> <a href="https://www.facebook.com/people/Hood-Bistro/100087656991229/" target="_blank">Hood fb</a>');
             L.marker(coords[3]).addTo(map)
             .bindPopup('Restaurace Osaka <br> <a href="https://www.osakarestaurace.cz/" target="_blank">Osaka web</a>');
+            L.marker(coords[4]).addTo(map)
+            .bindPopup('Skautská 11 <br> <a href="https://www.skautska.cz/podniky/" target="_blank">Skautská 11 web</a>');
+            L.marker(coords[5]).addTo(map)
+            .bindPopup('Dobroty u Dakoty <br> <a href="https://www.facebook.com/people/Dobroty-u-Dakoty/61579595963257/?locale=cs_CZ" target="_blank">Dobroty u Dakoty web</a>');
            /* L.marker([49.83, 18.28]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();*/
