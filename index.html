@@ -33,12 +33,13 @@
                     <li><button onclick="map.setView(coords[11],17)">DOCK</button></li>
                     <li><button onclick="map.setView(coords[6],17)">Barunka Speciál Bar</button></li>
                     <li><button onclick="map.setView(coords[8],17)">Pivní Zkušebna</button></li>
+                    <li><button onclick="map.setView(coords[15],17)">Radioklub</button></li>
+                    <li><button onclick="map.setView(coords[16],17)">Bistruck</button></li>
                     <li><button onclick="map.setView(coords[3],17)">Sbeerka</button></li>
                     <li><button onclick="map.setView(coords[2],17)">Restaurace Palouk</button></li>
                     <li><button onclick="map.setView(coords[5],17)">Žíznivý dromedár</button></li>
                     <li><button onclick="map.setView(coords[7],17)">U Segala</button></li>
                     <li><button onclick="map.setView(coords[12],17)">Babylon Café</button></li>
-                    
                 </ul>
             </div>
             <div id="map"></div>
@@ -72,7 +73,9 @@
             [49.83648, 18.29610],   //dock
             [49.83529, 18.29412],    //babylon
             [49.83442, 18.28149],    //labeerint
-            [49.82617, 18.17739]    //skautská 11
+            [49.82617, 18.17739],    //skautská 11
+            [49.77757, 18.44830],   //radioklub havr
+            [49.77684, 18.45313]    //bistruck havr
         ]
         //markery
             L.marker(coords[0]).addTo(map)
@@ -105,6 +108,10 @@
             .bindPopup('Labeerint <br> <a href="https://untappd.com/v/labeerint-craft-beer-pub/14102390" target="_blank">Labeerint untappd</a>');
             L.marker(coords[14]).addTo(map)
             .bindPopup('Skautská 11 <br> <a href="https://www.skautska.cz/podniky/bar/" target="_blank">Skautská 11 web</a>');
+            L.marker(coords[15]).addTo(map)
+            .bindPopup('Radioklub Havr <br> <a href="https://www.facebook.com/hospudkaradioklub/" target="_blank">Radioklub fb</a>');
+            L.marker(coords[16]).addTo(map)
+            .bindPopup('Bistruck Havr <br> <a href="https://www.instagram.com/bistruck_havirov/?hl=cs" target="_blank">Bistruck insta</a>');
            /* L.marker([49.83, 18.28]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();*/

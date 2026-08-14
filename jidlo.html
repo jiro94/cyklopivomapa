@@ -26,7 +26,7 @@
                     <li><button onclick="map.setView(coords[0],17)">Rafa pizza</button></li>
                     <li><button onclick="map.setView(coords[4],17)">Skautská 11</button></li>
                     <li><button onclick="map.setView(coords[2],17)">Hood Bistro</button></li>
-
+                    <li><button onclick="map.setView(coords[6],17)">Bistruck</button></li> 
                     <li><button onclick="map.setView(coords[3],17)">Restaurace Osaka</button></li>
                     <li><button onclick="map.setView(coords[1],17)">Zendino</button></li>
                 </ul>
@@ -54,6 +54,7 @@
             [49.81065, 18.25623],   //osaka
             [49.82617, 18.17739],    //skautská 11
             [49.78368, 18.24922]    //dobroty u dakoty
+            [49.77684, 18.45313]    //bistruck havr
         ]
         //markery
             L.marker(coords[0]).addTo(map)
@@ -68,6 +69,8 @@
             .bindPopup('Skautská 11 <br> <a href="https://www.skautska.cz/podniky/" target="_blank">Skautská 11 web</a>');
             L.marker(coords[5]).addTo(map)
             .bindPopup('Dobroty u Dakoty <br> <a href="https://www.facebook.com/people/Dobroty-u-Dakoty/61579595963257/?locale=cs_CZ" target="_blank">Dobroty u Dakoty web</a>');
+            L.marker(coords[6]).addTo(map)
+            .bindPopup('Bistruck Havr <br> <a href="https://www.instagram.com/bistruck_havirov/?hl=cs" target="_blank">Bistruck insta</a>');
            /* L.marker([49.83, 18.28]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();*/
